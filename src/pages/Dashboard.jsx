@@ -1,7 +1,75 @@
 import React from 'react'
 import { HiArrowUpRight, HiArrowDownRight } from "react-icons/hi2";
+import { Column } from '@ant-design/plots';
+import { Table } from 'antd';
+
+const columns = [
+    {
+        title: 'Name',
+        dataIndex: 'name',
+    },
+    {
+        title: 'Age',
+        dataIndex: 'age',
+    },
+    {
+        title: 'Address',
+        dataIndex: 'address',
+    },
+];
+const data1 = [];
+for (let i = 0; i < 46; i++) {
+    data1.push({
+        key: i,
+        name: `Edward King ${i}`,
+        age: 32,
+        address: `London, Park Lane no. ${i}`,
+    });
+}
 
 const Dashboard = () => {
+
+    const data = [
+        { type: "Jan", sales: 38 },
+        { type: "Feb", sales: 52 },
+        { type: "Mar", sales: 61 },
+        { type: "Apr", sales: 145 },
+        { type: "May", sales: 48 },
+        { type: "Jun", sales: 38 },
+        { type: "Jul", sales: 38 },
+        { type: "Aug", sales: 78 },
+        { type: "Sep", sales: 16 },
+        { type: "Oct", sales: 156 },
+        { type: "Nov", sales: 58 },
+        { type: "Dec", sales: 96 },
+    ];
+
+    const config = {
+        data,
+        xField: "type",
+        yField: "sales",
+        label: {
+            position: "middle"
+        },
+        xAxis: {
+            label: {
+                autoHide: true,
+                autoRotate: false,
+            },
+        },
+        style: {
+            fill: "#ffd333",
+        },
+        meta: {
+            type: {
+                alias: "Month"
+            },
+            sales: {
+                alias: "Income"
+            }
+        }
+    };
+
     return (
         <div>
             <h3 className='mb-4'>Dashboard</h3>
@@ -36,6 +104,14 @@ const Dashboard = () => {
                         <p className='mb-0'>Compared to April 2023</p>
                     </div>
                 </div>
+            </div>
+            <div className="mt-4">
+                <h3 className="mb-4">Income Statistics</h3>
+                <div><Column {...config} /></div>
+            </div>
+            <div className="mt-4">
+                <h3 className="mb-4">Recent Orders</h3>
+                <div><Table columns={columns} dataSource={data1} /></div>
             </div>
         </div>
     )
