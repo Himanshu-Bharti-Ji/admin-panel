@@ -13,10 +13,11 @@ import { BsCartPlus, BsDatabase, BsCartCheck } from "react-icons/bs";
 import { CiCircleList } from "react-icons/ci";
 import { SiBrandfolder } from "react-icons/si";
 import { BiCategoryAlt, BiColorFill, BiBookAdd } from "react-icons/bi";
-import { MdLibraryBooks, MdOutlineContactPage } from "react-icons/md";
+import { MdLibraryBooks, MdOutlineContactPage, MdNotifications } from "react-icons/md";
 import { TbCategoryPlus } from "react-icons/tb";
 
 import { useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 
 const { Header, Sider, Content } = Layout;
@@ -148,7 +149,7 @@ const MainLayout = () => {
                 />
             </Sider>
             <Layout>
-                <Header
+                <Header className='d-flex justify-content-between align-items-center pe-3 '
                     style={{
                         padding: 0,
                         background: colorBgContainer,
@@ -164,6 +165,21 @@ const MainLayout = () => {
                             height: 64,
                         }}
                     />
+                    <div className='d-flex align-items-center gap-3 '>
+                        <div className='position-relative '>
+                            <MdNotifications className='fs-3' />
+                            <span className='position-absolute badge bg-warning rounded-circle p-1'>6</span>
+                        </div>
+                        <div className='d-flex align-items-center gap-2 '>
+                            <div>
+                                <img height={40} width={40} src="https://avatars.githubusercontent.com/u/125482223?v=4" alt="avatar" />
+                            </div>
+                            <div>
+                                <h5>Himanshu</h5>
+                                <p>himanshubharti@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
                 </Header>
                 <Content
                     style={{
@@ -174,7 +190,7 @@ const MainLayout = () => {
                         borderRadius: borderRadiusLG,
                     }}
                 >
-                    Content
+                    <Outlet />
                 </Content>
             </Layout>
         </Layout>
