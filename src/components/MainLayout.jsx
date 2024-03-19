@@ -119,14 +119,14 @@ const MainLayout = () => {
                             label: 'Blogs',
                             children: [
                                 {
-                                    key: 'blog-list',
-                                    icon: <CiCircleList className='fs-5' />,
-                                    label: 'Blog List',
-                                },
-                                {
                                     key: 'add-blog',
                                     icon: <BiBookAdd className='fs-5' />,
                                     label: 'Add Blog',
+                                },
+                                {
+                                    key: 'blog-list',
+                                    icon: <CiCircleList className='fs-5' />,
+                                    label: 'Blog List',
                                 },
                                 {
                                     key: 'add-blog-category',

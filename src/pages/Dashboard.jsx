@@ -5,16 +5,20 @@ import { Table } from 'antd';
 
 const columns = [
     {
+        title: 'SNo.',
+        dataIndex: 'key',
+    },
+    {
         title: 'Name',
         dataIndex: 'name',
     },
     {
-        title: 'Age',
-        dataIndex: 'age',
+        title: 'Product',
+        dataIndex: 'product',
     },
     {
-        title: 'Address',
-        dataIndex: 'address',
+        title: 'Status',
+        dataIndex: 'status',
     },
 ];
 const data1 = [];
@@ -22,8 +26,8 @@ for (let i = 0; i < 46; i++) {
     data1.push({
         key: i,
         name: `Edward King ${i}`,
-        age: 32,
-        address: `London, Park Lane no. ${i}`,
+        product: 32,
+        status: `London, Park Lane no. ${i}`,
     });
 }
 
