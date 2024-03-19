@@ -15,6 +15,12 @@ import ColorList from './pages/ColorList'
 import CategoryList from './pages/CategoryList'
 import BrandList from './pages/BrandList'
 import ProductList from './pages/ProductList'
+import AddBlog from './pages/AddBlog'
+import AddBlogCategory from './pages/AddBlogCategory'
+import AddColor from './pages/AddColor'
+import AddCategory from './pages/AddCategory'
+import AddBrand from './pages/AddBrand'
+import AddProduct from './pages/AddProduct'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,6 +42,12 @@ function App() {
           <Route path='category-list' element={<CategoryList />} />
           <Route path='brand-list' element={<BrandList />} />
           <Route path='product-list' element={<ProductList />} />
+          <Route path='add-blog' element={<AddBlog />} />
+          <Route path='add-blog-category' element={<AddBlogCategory />} />
+          <Route path='color' element={<AddColor />} />
+          <Route path='category' element={<AddCategory />} />
+          <Route path='brand' element={<AddBrand />} />
+          <Route path='product' element={<AddProduct />} />
         </Route>
       </Routes>
     </Router>

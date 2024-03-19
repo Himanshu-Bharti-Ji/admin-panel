@@ -31,8 +31,8 @@ for (let i = 0; i < 46; i++) {
 
 const ColorList = () => {
     return (
-        <div className='mb-4'>
-            <h3>Colors</h3>
+        <div>
+            <h3 className='mb-4 title'>Colors</h3>
             <div>
                 <Table columns={columns} dataSource={data1} />
             </div>

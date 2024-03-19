@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
@@ -149,7 +151,7 @@ const MainLayout = () => {
                 />
             </Sider>
             <Layout>
-                <Header className='d-flex justify-content-between align-items-center pe-3 '
+                <Header className='d-flex justify-content-between align-items-center pe-5 '
                     style={{
                         padding: 0,
                         background: colorBgContainer,
@@ -170,13 +172,17 @@ const MainLayout = () => {
                             <MdNotifications className='fs-3' />
                             <span className='position-absolute badge bg-warning rounded-circle p-1'>6</span>
                         </div>
-                        <div className='d-flex align-items-center gap-2 '>
+                        <div className='d-flex align-items-center gap-2 dropdown '>
                             <div>
                                 <img height={40} width={40} src="https://avatars.githubusercontent.com/u/125482223?v=4" alt="avatar" />
                             </div>
-                            <div>
+                            <div role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 <h5>Himanshu</h5>
                                 <p>himanshubharti@gmail.com</p>
+                            </div>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><Link className="dropdown-item py-1 mb-1" style={{ height: "auto", lineHeight: "20px" }} to="/">View Profile</Link></li>
+                                <li><Link className="dropdown-item py-1 mb-1" style={{ height: "auto", lineHeight: "20px" }} to="/">Signout</Link></li>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ const Login = () => {
     return (
         <div className="py-5 d-flex justify-content-center align-items-center " style={{ background: "#ffd333", minHeight: "100vh" }} >
             <div className="my-5 w-25 bg-white rounded-3 mx-auto p-4">
-                <h3>Login</h3>
+                <h3 className='title'>Login</h3>
                 <p>Login to your account to continue.</p>
                 <form action="">
                     <CustomInput type='email' label='Email Address' id='login_email' />

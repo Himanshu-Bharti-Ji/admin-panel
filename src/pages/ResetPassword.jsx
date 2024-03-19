@@ -5,7 +5,7 @@ const ResetPassword = () => {
     return (
         <div className="py-5 d-flex justify-content-center align-items-center " style={{ background: "#ffd333", minHeight: "100vh" }} >
             <div className="my-5 w-25 bg-white rounded-3 mx-auto p-4">
-                <h3>Reset Password</h3>
+                <h3 className='title'>Reset Password</h3>
                 <p>Please create new password for your account.</p>
                 <form action="">
                     <CustomInput type='password' label='New Password' id='new_password' />

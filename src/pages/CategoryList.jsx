@@ -31,8 +31,8 @@ for (let i = 0; i < 46; i++) {
 
 const CategoryList = () => {
     return (
-        <div className='mb-4'>
-            <h3>Product Categories</h3>
+        <div>
+            <h3 className='mb-4 title'>Product Categories</h3>
             <div>
                 <Table columns={columns} dataSource={data1} />
             </div>

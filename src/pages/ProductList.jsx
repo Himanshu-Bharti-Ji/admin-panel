@@ -1,5 +1,7 @@
 import React from 'react'
 import { Table } from 'antd';
+import { TbEdit } from "react-icons/tb";
+import { MdDeleteForever } from "react-icons/md";
 
 const columns = [
     {
@@ -31,8 +33,8 @@ for (let i = 0; i < 46; i++) {
 
 const ProductList = () => {
     return (
-        <div className='mb-4'>
-            <h3>Products</h3>
+        <div>
+            <h3 className='mb-4 title'>Products</h3>
             <div>
                 <Table columns={columns} dataSource={data1} />
             </div>
